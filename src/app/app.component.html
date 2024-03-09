@@ -6,9 +6,13 @@
   <hr />
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">
+        Change first Element
+      </button>
       <app-server-element
         *ngFor="let severElement of serverElements"
         [srvElement]="severElement"
+        [name]="severElement.name"
       >
         <p>
           <strong *ngIf="severElement.type === 'server'" style="color: red">{{
