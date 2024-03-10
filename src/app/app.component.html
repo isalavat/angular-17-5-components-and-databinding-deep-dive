@@ -14,7 +14,7 @@
         [srvElement]="severElement"
         [name]="severElement.name"
       >
-        <p>
+        <p #contentParagraph>
           <strong *ngIf="severElement.type === 'server'" style="color: red">{{
             severElement.content
           }}</strong>
